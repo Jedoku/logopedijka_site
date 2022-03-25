@@ -1,180 +1,185 @@
-Started GET "/" for 127.0.0.1 at 2022-03-25 16:34:45 +0200
+Started GET "/" for 127.0.0.1 at 2022-03-25 16:55:22 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 619)
+  Rendered layout layouts/application.html.erb (Duration: 166.7ms | Allocations: 69165)
+Completed 500 Internal Server Error in 172ms (Allocations: 71553)
+
+
   
-ActiveRecord::ConnectionNotEstablished (could not connect to server: No such file or directory
-	Is the server running locally and accepting
-	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x000000000089f8>
+Did you mean?  javascript_path
+               javascript_tag):
+    10: <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    11:     <%= stylesheet_link_tag 'https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css' %>
+    12:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    13:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    14:     <%= javascript_pack_tag 'googleanalitycs'%>
+    15:   </head>
+    16: 
+  
+app/views/layouts/application.html.erb:13
+Started GET "/" for 127.0.0.1 at 2022-03-25 16:55:46 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 247)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 6731)
+Completed 500 Internal Server Error in 16ms (Allocations: 7676)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x00000000008d90>
+Did you mean?  javascript_path
+               javascript_tag):
+     9:     <link rel="preconnect" href="https://fonts.gstatic.com">
+    10: <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    11:     <%= stylesheet_link_tag 'https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css' %>
+    12:     <%= javascript_pack_tag 'googleanalitycs'%>
+    13:   </head>
+    14: 
+    15:   <body>
+  
+app/views/layouts/application.html.erb:12
+Started GET "/" for 127.0.0.1 at 2022-03-25 16:55:56 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 247)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 6932)
+Completed 500 Internal Server Error in 17ms (Allocations: 7879)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_post_path' for #<ActionView::Base:0x00000000009100>
+Did you mean?  new_polymorphic_path):
+    19:   <nav class="my-2 my-md-0 me-md-3">
+    20:     <span class="p-2 text-dark"> <%=link_to 'Головна', home_path %> </span>
+    21:     <span class="p-2 text-dark"> <%=link_to 'Про нас', about_path %> </span>
+    22:     <span class="p-2 text-dark"> <%=link_to 'Новий пост', new_post_path %> </span>
+    23:   </nav>
+    24: 
+    25:   <button type="button" class="btn btn-primary">Вхід</button>-->
+  
+app/views/layouts/application.html.erb:22
+Started GET "/" for 127.0.0.1 at 2022-03-25 16:56:50 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 247)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 4906)
+Completed 500 Internal Server Error in 9ms (Allocations: 5853)
+
+
+  
+ActionView::Template::Error (Missing partial include/auth/_auth_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/vitalii/Logopedija/Logopedija/app/views"
 ):
+    34:         </li>
+    35:       </ul>
+    36:       <form class="d-flex">
+    37:         <!--<%= render 'include/auth/auth_header' %>-->
+    38: 
+    39:     <!--<font size="5" color="#0d6efd" face="Comic Sans MS, cursive">+380679684316<span class="badge rounded-pill bg-info text-dark">Viber</span></font>-->
+    40: 
   
-activerecord (7.0.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
-activerecord (7.0.2.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
-activerecord (7.0.2.3) lib/active_record/connection_handling.rb:280:in `connection'
-activerecord (7.0.2.3) lib/active_record/migration.rb:613:in `connection'
-activerecord (7.0.2.3) lib/active_record/migration.rb:608:in `build_watcher'
-activerecord (7.0.2.3) lib/active_record/migration.rb:590:in `block in call'
-activerecord (7.0.2.3) lib/active_record/migration.rb:589:in `synchronize'
-activerecord (7.0.2.3) lib/active_record/migration.rb:589:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
-activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
-web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
-web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
-web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
-web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
-railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
-activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
-activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
-activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
-railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
-sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
-rack (2.2.3) lib/rack/method_override.rb:24:in `call'
-rack (2.2.3) lib/rack/runtime.rb:22:in `call'
-activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
-rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
-railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
-puma (5.6.2) lib/puma/configuration.rb:252:in `call'
-puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
-puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
-puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
-puma (5.6.2) lib/puma/server.rb:441:in `process_client'
-puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
-Started GET "/" for 127.0.0.1 at 2022-03-25 16:36:44 +0200
+app/views/layouts/application.html.erb:37
+Started GET "/" for 127.0.0.1 at 2022-03-25 16:57:08 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 247)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 4823)
+Completed 500 Internal Server Error in 7ms (Allocations: 5765)
+
+
   
-ActiveRecord::ConnectionNotEstablished (could not connect to server: No such file or directory
-	Is the server running locally and accepting
-	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+ActionView::Template::Error (Missing partial include/main/_notification with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/vitalii/Logopedija/Logopedija/app/views"
 ):
+    41: </nav>
+    42: </header>
+    43:   <div class="container">
+    44:      <%= render 'include/main/notification' %>
+    45:     <%= yield %>
+    46:     </div>
+    47:   </body>
   
-activerecord (7.0.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
-activerecord (7.0.2.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
-activerecord (7.0.2.3) lib/active_record/connection_handling.rb:280:in `connection'
-activerecord (7.0.2.3) lib/active_record/migration.rb:613:in `connection'
-activerecord (7.0.2.3) lib/active_record/migration.rb:608:in `build_watcher'
-activerecord (7.0.2.3) lib/active_record/migration.rb:590:in `block in call'
-activerecord (7.0.2.3) lib/active_record/migration.rb:589:in `synchronize'
-activerecord (7.0.2.3) lib/active_record/migration.rb:589:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
-activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
-web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
-web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
-web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
-web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
-railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
-activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
-activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
-activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
-railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
-sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
-rack (2.2.3) lib/rack/method_override.rb:24:in `call'
-rack (2.2.3) lib/rack/runtime.rb:22:in `call'
-activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
-rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
-railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
-puma (5.6.2) lib/puma/configuration.rb:252:in `call'
-puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
-puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
-puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
-puma (5.6.2) lib/puma/server.rb:441:in `process_client'
-puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
-Started GET "/categories" for 127.0.0.1 at 2022-03-25 16:36:53 +0200
-  
-ActiveRecord::ConnectionNotEstablished (could not connect to server: No such file or directory
-	Is the server running locally and accepting
-	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
-):
-  
-activerecord (7.0.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
-activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
-activerecord (7.0.2.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
-activerecord (7.0.2.3) lib/active_record/connection_handling.rb:280:in `connection'
-activerecord (7.0.2.3) lib/active_record/migration.rb:613:in `connection'
-activerecord (7.0.2.3) lib/active_record/migration.rb:608:in `build_watcher'
-activerecord (7.0.2.3) lib/active_record/migration.rb:590:in `block in call'
-activerecord (7.0.2.3) lib/active_record/migration.rb:589:in `synchronize'
-activerecord (7.0.2.3) lib/active_record/migration.rb:589:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
-activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
-web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
-web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
-web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
-web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
-railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
-railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
-activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
-activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
-activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
-railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
-sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
-rack (2.2.3) lib/rack/method_override.rb:24:in `call'
-rack (2.2.3) lib/rack/runtime.rb:22:in `call'
-activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
-rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
-actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
-railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
-puma (5.6.2) lib/puma/configuration.rb:252:in `call'
-puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
-puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
-puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
-puma (5.6.2) lib/puma/server.rb:441:in `process_client'
-puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+app/views/layouts/application.html.erb:44
+Started GET "/" for 127.0.0.1 at 2022-03-25 16:57:17 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 247)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2005)
+Completed 200 OK in 8ms (Views: 7.6ms | Allocations: 3018)
+
+
+Started GET "/rules" for 127.0.0.1 at 2022-03-25 16:57:24 +0200
+Processing by PagesController#rules as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/rules.html.erb within layouts/application
+  Rendered pages/rules.html.erb within layouts/application (Duration: 1.3ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 1465)
+Completed 200 OK in 8ms (Views: 7.6ms | Allocations: 1792)
+
+
+Started GET "/rules" for 127.0.0.1 at 2022-03-25 16:57:27 +0200
+Processing by PagesController#rules as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/rules.html.erb within layouts/application
+  Rendered pages/rules.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1176)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 1429)
+
+
+Started GET "/shop" for 127.0.0.1 at 2022-03-25 16:57:28 +0200
+Processing by PagesController#shop as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/shop.html.erb within layouts/application
+  Rendered pages/shop.html.erb within layouts/application (Duration: 3.2ms | Allocations: 3157)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 4207)
+Completed 200 OK in 6ms (Views: 5.7ms | Allocations: 4514)
+
+
+Started GET "/rules" for 127.0.0.1 at 2022-03-25 16:57:29 +0200
+Processing by PagesController#rules as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/rules.html.erb within layouts/application
+  Rendered pages/rules.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1191)
+Completed 200 OK in 3ms (Views: 3.0ms | Allocations: 1444)
+
+
+Started GET "/freegames" for 127.0.0.1 at 2022-03-25 16:57:30 +0200
+Processing by PagesController#freegames as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/freegames.html.erb within layouts/application
+  Rendered pages/freegames.html.erb within layouts/application (Duration: 0.8ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1502)
+Completed 200 OK in 6ms (Views: 4.9ms | Allocations: 1753)
+
+
+Started GET "/shop" for 127.0.0.1 at 2022-03-25 16:57:31 +0200
+Processing by PagesController#shop as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/shop.html.erb within layouts/application
+  Rendered pages/shop.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2637)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3708)
+Completed 200 OK in 12ms (Views: 12.1ms | Allocations: 3962)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-25 16:57:38 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1174)
+Completed 200 OK in 5ms (Views: 4.2ms | Allocations: 1425)
+
+
