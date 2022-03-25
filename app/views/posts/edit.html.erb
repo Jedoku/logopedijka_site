@@ -1,0 +1,22 @@
+<h1>Редагувати пост</h1>
+<%= form_for :post, url: post_path(@post), method: :patch do |f|%>
+
+<% if @post.errors.any?%>
+    <%@post.errors.full_messages.each do |msg|%>
+        <div class="alert alert-primary" role="alert">
+        <%= msg %>
+    </div>
+    <%end%> 
+<%end%>
+<p> Назва<br>
+<%= f.text_field(:title, {:class => 'form-control'} )%>
+</p>
+<p>
+    Текст пост<br>
+    <%= f.text_area(:body, {:class => 'form-control'} ) %>
+</p>
+<p>
+    <%= f.submit( {:class => 'btn btn-primary'} )%>
+</p>
+
+    <% end %>
